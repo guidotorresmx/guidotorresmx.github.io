@@ -31,7 +31,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
-        publish_branch: main  # deploying branch
+        publish_branch: blog  # deploying branch
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -39,4 +39,4 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-west-1
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./source/ s3://blog-guidotorresmx --delete
+      run: aws s3 sync ./public/ s3://blog-guidotorresmx --delete

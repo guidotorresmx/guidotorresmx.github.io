@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Configuration | Marco Guido&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="You can modify site settings in _config.yml or in an alternate config file. Site   Setting Description    title The title of your website   subtitle The subtitle of your website   description The desc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Configuration">
+<meta property="og:url" content="http://example.com/2021/10/29/configuration/index.html">
+<meta property="og:site_name" content="Marco Guido&#39;s blog">
+<meta property="og:description" content="You can modify site settings in _config.yml or in an alternate config file. Site   Setting Description    title The title of your website   subtitle The subtitle of your website   description The desc">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-10-29T08:17:53.132Z">
+<meta property="article:modified_time" content="2021-10-29T08:17:53.132Z">
+<meta property="article:author" content="Marco Guido">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="website">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Marco Guido's blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Marco Guido&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Software and some electronics stuff</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-configuration" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/29/configuration/" class="article-date">
+  <time class="dt-published" datetime="2021-10-29T08:17:53.132Z" itemprop="datePublished">2021-10-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/cheatsheets/">cheatsheets</a>►<a class="article-category-link" href="/categories/frontend/">frontend</a>►<a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Configuration
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>You can modify site settings in <code>_config.yml</code> or in an <a href="#Using-an-Alternate-Config">alternate config file</a>.</p>
+<h3 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h3><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>title</code></td>
+<td>The title of your website</td>
+</tr>
+<tr>
+<td><code>subtitle</code></td>
+<td>The subtitle of your website</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>The description of your website</td>
+</tr>
+<tr>
+<td><code>keywords</code></td>
+<td>The keywords of your website. Supports multiple values.</td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>Your name</td>
+</tr>
+<tr>
+<td><code>language</code></td>
+<td>The language of your website. Use a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">2-letter ISO-639-1 code</a> or optionally <a href="/docs/internationalization">its variant</a>. Default is <code>en</code>.</td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>The timezone of your website. Hexo uses the setting on your computer by default. You can find the list of available timezones <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">here</a>. Some examples are <code>America/New_York</code>, <code>Japan</code>, and <code>UTC</code>.</td>
+</tr>
+</tbody></table>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>url</code></td>
+<td>The URL of your website, must starts with <code>http://</code> or <code>https://</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>root</code></td>
+<td>The root directory of your website</td>
+<td><code>url&#39;s pathname</code></td>
+</tr>
+<tr>
+<td><code>permalink</code></td>
+<td>The <a href="permalinks.html">permalink</a> format of articles</td>
+<td><code>:year/:month/:day/:title/</code></td>
+</tr>
+<tr>
+<td><code>permalink_defaults</code></td>
+<td>Default values of each segment in permalink</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pretty_urls</code></td>
+<td>Rewrite the <a href="variables.html"><code>permalink</code></a> variables to pretty URLs</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pretty_urls.trailing_index</code></td>
+<td>Trailing <code>index.html</code>, set to <code>false</code> to remove it</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>pretty_urls.trailing_html</code></td>
+<td>Trailing <code>.html</code>, set to <code>false</code> to remove it (<em>does not apply to trailing <code>index.html</code></em>)</td>
+<td><code>true</code></td>
+</tr>
+</tbody></table>
+<p>Examples:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># e.g. page.permalink is http://example.com/foo/bar/index.html</span></span><br><span class="line"><span class="attr">pretty_urls:</span></span><br><span class="line">  <span class="attr">trailing_index:</span> <span class="literal">false</span></span><br><span class="line"><span class="comment"># becomes http://example.com/foo/bar/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Directory"><a href="#Directory" class="headerlink" title="Directory"></a>Directory</h3><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>source_dir</code></td>
+<td>Source folder. Where your content is stored</td>
+<td><code>source</code></td>
+</tr>
+<tr>
+<td><code>public_dir</code></td>
+<td>Public folder. Where the static site will be generated</td>
+<td><code>public</code></td>
+</tr>
+<tr>
+<td><code>tag_dir</code></td>
+<td>Tag directory</td>
+<td><code>tags</code></td>
+</tr>
+<tr>
+<td><code>archive_dir</code></td>
+<td>Archive directory</td>
+<td><code>archives</code></td>
+</tr>
+<tr>
+<td><code>category_dir</code></td>
+<td>Category directory</td>
+<td><code>categories</code></td>
+</tr>
+<tr>
+<td><code>code_dir</code></td>
+<td>Include code directory (subdirectory of <code>source_dir</code>)</td>
+<td><code>downloads/code</code></td>
+</tr>
+<tr>
+<td><code>i18n_dir</code></td>
+<td>i18n directory</td>
+<td><code>:lang</code></td>
+</tr>
+<tr>
+<td><code>skip_render</code></td>
+<td>Paths that will be copied to <code>public</code> raw, without being rendered. You can use <a target="_blank" rel="noopener" href="https://github.com/micromatch/micromatch#extended-globbing">glob expressions</a> for path matching.</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Examples:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">skip_render:</span> <span class="string">&quot;mypage/**/*&quot;</span></span><br><span class="line"><span class="comment"># will output `source/mypage/index.html` and `source/mypage/code.js` without altering them.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## This also can be used to exclude posts,</span></span><br><span class="line"><span class="attr">skip_render:</span> <span class="string">&quot;_posts/test-post.md&quot;</span></span><br><span class="line"><span class="comment"># will ignore the `source/_posts/test-post.md`.</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Writing"><a href="#Writing" class="headerlink" title="Writing"></a>Writing</h3><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>new_post_name</code></td>
+<td>The filename format for new posts</td>
+<td><code>:title.md</code></td>
+</tr>
+<tr>
+<td><code>default_layout</code></td>
+<td>Default layout</td>
+<td><code>post</code></td>
+</tr>
+<tr>
+<td><code>titlecase</code></td>
+<td>Transform titles into title case?</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>external_link</code></td>
+<td>Open external links in a new tab?</td>
+<td></td>
+</tr>
+<tr>
+<td><code>external_link.enable</code></td>
+<td>Open external links in a new tab?</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>external_link.field</code></td>
+<td>Applies to the whole <code>site</code> or <code>post</code> only</td>
+<td><code>site</code></td>
+</tr>
+<tr>
+<td><code>external_link.exclude</code></td>
+<td>Exclude hostname. Specify subdomain when applicable, including <code>www</code></td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><code>filename_case</code></td>
+<td>Transform filenames to <code>1</code> lower case; <code>2</code> upper case</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>render_drafts</code></td>
+<td>Display drafts?</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>post_asset_folder</code></td>
+<td>Enable the <a href="asset-folders.html">Asset Folder</a>?</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>relative_link</code></td>
+<td>Make links relative to the root folder?</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>future</code></td>
+<td>Display future posts?</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>highlight</code></td>
+<td>Code block syntax highlight settings, see <a href="/docs/syntax-highlight#Highlight-js">Highlight.js</a> section for usage guide</td>
+<td></td>
+</tr>
+<tr>
+<td><code>prismjs</code></td>
+<td>Code block syntax highlight settings, see <a href="/docs/syntax-highlight#PrismJS">PrismJS</a> section for usage guide</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="Home-page-setting"><a href="#Home-page-setting" class="headerlink" title="Home page setting"></a>Home page setting</h3><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>index_generator</code></td>
+<td>Generate an archive of posts, powered by <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-index">hexo-generator-index</a></td>
+<td></td>
+</tr>
+<tr>
+<td><code>index_generator.path</code></td>
+<td>Root path for your blog’s index page</td>
+<td><code>&#39;&#39;</code></td>
+</tr>
+<tr>
+<td><code>index_generator.per_page</code></td>
+<td>Posts displayed per page.</td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>index_generator.order_by</code></td>
+<td>Posts order. Order by descending date (new to old) by default.</td>
+<td><code>-date</code></td>
+</tr>
+<tr>
+<td><code>index_generator.pagination_dir</code></td>
+<td>URL format, see <a href="#Pagination">Pagination</a> setting below</td>
+<td><code>page</code></td>
+</tr>
+</tbody></table>
+<h3 id="Category-amp-Tag"><a href="#Category-amp-Tag" class="headerlink" title="Category &amp; Tag"></a>Category &amp; Tag</h3><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>default_category</code></td>
+<td>Default category</td>
+<td><code>uncategorized</code></td>
+</tr>
+<tr>
+<td><code>category_map</code></td>
+<td>Category slugs</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tag_map</code></td>
+<td>Tag slugs</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="Date-Time-format"><a href="#Date-Time-format" class="headerlink" title="Date / Time format"></a>Date / Time format</h3><p>Hexo uses <a target="_blank" rel="noopener" href="http://momentjs.com/">Moment.js</a> to process dates.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>date_format</code></td>
+<td>Date format</td>
+<td><code>YYYY-MM-DD</code></td>
+</tr>
+<tr>
+<td><code>time_format</code></td>
+<td>Time format</td>
+<td><code>HH:mm:ss</code></td>
+</tr>
+<tr>
+<td><code>updated_option</code></td>
+<td>The <a href="/docs/variables#Page-Variables"><code>updated</code></a> value to used when not provided in the front-matter</td>
+<td><code>mtime</code></td>
+</tr>
+</tbody></table>
+<p><code>updated_option</code> controls the <code>updated</code> value when not provided in the front-matter:</p>
+<ul>
+<li><code>mtime</code>: Use file modification date as <code>updated</code>. It is the default behavior of Hexo since 3.0.0</li>
+<li><code>date</code>: Use <code>date</code> as <code>updated</code>. Typically used with Git workflow when file modification date could be different.</li>
+<li><code>empty</code>: Simply drop <code>updated</code> when not provided. May not be compatible with most themes and plugins.</li>
+</ul>
+<p><code>use_date_for_updated</code> is deprecated and will be removed in next major version. Please use <code>updated_option: &#39;date&#39;</code> instead.</p>
+<h3 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h3><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>per_page</code></td>
+<td>Number of posts displayed on each page. <code>0</code> disables pagination</td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>pagination_dir</code></td>
+<td>URL format</td>
+<td><code>page</code></td>
+</tr>
+</tbody></table>
+<p>Examples:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">pagination_dir:</span> <span class="string">&#x27;page&#x27;</span></span><br><span class="line"><span class="comment"># http://example.com/page/2</span></span><br><span class="line"></span><br><span class="line"><span class="attr">pagination_dir:</span> <span class="string">&#x27;awesome-page&#x27;</span></span><br><span class="line"><span class="comment"># http://example.com/awesome-page/2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h3><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>theme</code></td>
+<td>Theme name. <code>false</code> disables theming</td>
+</tr>
+<tr>
+<td><code>theme_config</code></td>
+<td>Theme configuration. Include any custom theme settings under this key to override theme defaults.</td>
+</tr>
+<tr>
+<td><code>deploy</code></td>
+<td>Deployment settings</td>
+</tr>
+<tr>
+<td><code>meta_generator</code></td>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes">Meta generator</a> tag. <code>false</code> disables injection of the tag.</td>
+</tr>
+</tbody></table>
+<h3 id="Include-Exclude-Files-or-Folders"><a href="#Include-Exclude-Files-or-Folders" class="headerlink" title="Include/Exclude Files or Folders"></a>Include/Exclude Files or Folders</h3><p>Use the following options to explicitly process or ignore certain files/folders. Support <a target="_blank" rel="noopener" href="https://github.com/micromatch/micromatch#extended-globbing">glob expressions</a> for path matching.</p>
+<p><code>include</code> and <code>exclude</code> options only apply to the <code>source/</code> folder, whereas <code>ignore</code> option applies to all folders.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>include</code></td>
+<td>Include hidden files (including files/folders with a name that start with an underscore, with an exception*)</td>
+</tr>
+<tr>
+<td><code>exclude</code></td>
+<td>Exclude files/folders</td>
+</tr>
+<tr>
+<td><code>ignore</code></td>
+<td>Ignore files/folders</td>
+</tr>
+</tbody></table>
+<p>Examples:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Include/Exclude Files/Folders</span></span><br><span class="line"><span class="attr">include:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&quot;.nojekyll&quot;</span></span><br><span class="line">  <span class="comment"># Include &#x27;source/css/_typing.css&#x27;.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&quot;css/_typing.css&quot;</span></span><br><span class="line">  <span class="comment"># Include any file in &#x27;source/_css/&#x27;.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&quot;_css/*&quot;</span></span><br><span class="line">  <span class="comment"># Include any file and subfolder in &#x27;source/_css/&#x27;.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&quot;_css/**/*&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">exclude:</span></span><br><span class="line">  <span class="comment"># Exclude &#x27;source/js/test.js&#x27;.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&quot;js/test.js&quot;</span></span><br><span class="line">  <span class="comment"># Exclude any file in &#x27;source/js/&#x27;.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&quot;js/*&quot;</span></span><br><span class="line">  <span class="comment"># Exclude any file and subfolder in &#x27;source/js/&#x27;.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&quot;js/**/*&quot;</span></span><br><span class="line">  <span class="comment"># Exclude any file with filename that starts with &#x27;test&#x27; in &#x27;source/js/&#x27;.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&quot;js/test*&quot;</span></span><br><span class="line">  <span class="comment"># Exclude any file with filename that starts with &#x27;test&#x27; in &#x27;source/js/&#x27; and its subfolders.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&quot;js/**/test*&quot;</span></span><br><span class="line">  <span class="comment"># Do not use this to exclude posts in the &#x27;source/_posts/&#x27;.</span></span><br><span class="line">  <span class="comment"># Use skip_render for that. Or prepend an underscore to the filename.</span></span><br><span class="line">  <span class="comment"># - &quot;_posts/hello-world.md&quot; # Does not work.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">ignore:</span></span><br><span class="line">  <span class="comment"># Ignore any folder named &#x27;foo&#x27;.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&quot;**/foo&quot;</span></span><br><span class="line">  <span class="comment"># Ignore &#x27;foo&#x27; folder in &#x27;themes/&#x27; only.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&quot;**/themes/*/foo&quot;</span></span><br><span class="line">  <span class="comment"># Same as above, but applies to every subfolders of &#x27;themes/&#x27;.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&quot;**/themes/**/foo&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Each value in the list must be enclosed with single/double quotes.</p>
+<p><code>include:</code> and <code>exclude:</code> do not apply to the <code>themes/</code> folder. Either use <code>ignore:</code> or alternatively, prepend an underscore to the file/folder name to exclude.</p>
+<p>* Notable exception is the <code>source/_posts</code> folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using <code>include:</code> rule in that folder is not recommended.</p>
+<h3 id="Using-an-Alternate-Config"><a href="#Using-an-Alternate-Config" class="headerlink" title="Using an Alternate Config"></a>Using an Alternate Config</h3><p>A custom config file path can be specified by adding the <code>--config</code> flag to your <code>hexo</code> commands with a path to an alternate YAML or JSON config file, or a comma-separated list (no spaces) of multiple YAML or JSON files.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># use &#x27;custom.yml&#x27; in place of &#x27;_config.yml&#x27;</span></span><br><span class="line">$ hexo server --config custom.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># use &#x27;custom.yml&#x27; &amp; &#x27;custom2.json&#x27;, prioritizing &#x27;custom2.json&#x27;</span></span><br><span class="line">$ hexo server --config custom.yml,custom2.json</span><br></pre></td></tr></table></figure>
+
+<p>Using multiple files combines all the config files and saves the merged settings to <code>_multiconfig.yml</code>. The later values take precedence. It works with any number of JSON and YAML files with arbitrarily deep objects. Note that <strong>no spaces are allowed in the list</strong>.</p>
+<p>For instance, in the above example if <code>foo: bar</code> is in <code>custom.yml</code>, but <code>&quot;foo&quot;: &quot;dinosaur&quot;</code> is in <code>custom2.json</code>, <code>_multiconfig.yml</code> will contain <code>foo: dinosaur</code>.</p>
+<h3 id="Alternate-Theme-Config"><a href="#Alternate-Theme-Config" class="headerlink" title="Alternate Theme Config"></a>Alternate Theme Config</h3><p>Hexo themes are independent projects, with separate <code>_config.yml</code> files.</p>
+<p>Instead of forking a theme, and maintaining a custom version with your settings, you can configure it from somewhere else:</p>
+<p><strong>from <code>theme_config</code> in site’s primary configuration file</strong></p>
+<blockquote>
+<p>Supported since Hexo 2.8.2</p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.yml</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">&quot;my-theme&quot;</span></span><br><span class="line"><span class="attr">theme_config:</span></span><br><span class="line">  <span class="attr">bio:</span> <span class="string">&quot;My awesome bio&quot;</span></span><br><span class="line">  <span class="attr">foo:</span></span><br><span class="line">    <span class="attr">bar:</span> <span class="string">&#x27;a&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># themes/my-theme/_config.yml</span></span><br><span class="line"><span class="attr">bio:</span> <span class="string">&quot;Some generic bio&quot;</span></span><br><span class="line"><span class="attr">logo:</span> <span class="string">&quot;a-cool-image.png&quot;</span></span><br><span class="line">  <span class="attr">foo:</span></span><br><span class="line">    <span class="attr">baz:</span> <span class="string">&#x27;b&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>Resulting in theme configuration:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  bio: <span class="string">&quot;My awesome bio&quot;</span>,</span><br><span class="line">  logo: <span class="string">&quot;a-cool-image.png&quot;</span>,</span><br><span class="line">  foo: &#123;</span><br><span class="line">    bar: <span class="string">&quot;a&quot;</span>,</span><br><span class="line">    baz: <span class="string">&quot;b&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>from a dedicated <code>_config.[theme].yml</code> file</strong></p>
+<blockquote>
+<p>Supported since Hexo 5.0.0</p>
+</blockquote>
+<p>The file should be placed in your site folder, both <code>yml</code> and <code>json</code> are supported. <code>theme</code> inside <code>_config.yml</code> must be configured for Hexo to read <code>_config.[theme].yml</code></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.yml</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">&quot;my-theme&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.my-theme.yml</span></span><br><span class="line"><span class="attr">bio:</span> <span class="string">&quot;My awesome bio&quot;</span></span><br><span class="line"><span class="attr">foo:</span></span><br><span class="line">  <span class="attr">bar:</span> <span class="string">&#x27;a&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># themes/my-theme/_config.yml</span></span><br><span class="line"><span class="attr">bio:</span> <span class="string">&quot;Some generic bio&quot;</span></span><br><span class="line"><span class="attr">logo:</span> <span class="string">&quot;a-cool-image.png&quot;</span></span><br><span class="line">  <span class="attr">foo:</span></span><br><span class="line">    <span class="attr">baz:</span> <span class="string">&#x27;b&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>Resulting in theme configuration:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  bio: <span class="string">&quot;My awesome bio&quot;</span>,</span><br><span class="line">  logo: <span class="string">&quot;a-cool-image.png&quot;</span>,</span><br><span class="line">  foo: &#123;</span><br><span class="line">    bar: <span class="string">&quot;a&quot;</span>,</span><br><span class="line">    baz: <span class="string">&quot;b&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>We strongly recommend you to store your theme configuration in one place. But in case you have to store your theme configuration separately, you need to know the priority of those configurations: The <code>theme_config</code> inside site’s primary configuration file has the highest priority during merging, then the dedicated theme configuration file.<br>The <code>_config.yml</code> file under the theme directory has the lowest priority.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/29/configuration/" data-id="ckvc3s36v00058vochvzxa496" data-title="Configuration" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/website/" rel="tag">website</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/10/29/commands/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          commands
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/10/29/contributing/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Contributing</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/cheatsheets/">cheatsheets</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/frontend/">frontend</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/website/" rel="tag">website</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/website/" style="font-size: 10px;">website</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/10/29/asset-folders/">Asset Folders</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/29/commands/">commands</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/29/configuration/">Configuration</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/29/contributing/">Contributing</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/29/data-files/">Data Files</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Marco Guido<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

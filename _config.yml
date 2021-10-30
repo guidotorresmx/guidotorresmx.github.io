@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -55,6 +55,13 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
+
+# mermaid chart
+#mermaid: ## mermaid url https://github.com/knsv/mermaid
+#  enable: true  # default true
+#  version: "7.1.2" # default v7.1.2
+#  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+    #startOnload: true  // default true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -97,7 +104,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: claudia
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

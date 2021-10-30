@@ -1,4 +1,4 @@
-name: Upload Website CI
+name: Pages
 on:
   push:
     branches: [ source ]

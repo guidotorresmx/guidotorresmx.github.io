@@ -1,4 +1,4 @@
-- var debugSNS = false
+- var debugSNS = true
 if (debugSNS || theme.social.twitter)
     a(title="twitter" target="_blank" rel="noopener nofollow" href=`//twitter.com/${theme.social.twitter}`)
         i.iconfont.icon-twitter
@@ -10,14 +10,6 @@ if (debugSNS || theme.social.github)
 if (debugSNS || theme.social.instagram)
     a(title="instagram" target="_blank" rel="noopener nofollow" href=`//www.instagram.com/${theme.social.instagram}`)
         i.iconfont.icon-ins
-// RSS
-if (debugSNS || config.feed && config.feed.enable)
-    a(title="rss" target="_blank" rel="noopener nofollow" href= url_for(config.feed.path))
-        i.iconfont.icon-rss
-// 知乎
-if (debugSNS || theme.social.zhihu)
-    a(title="zhihu" target="_blank" rel="noopener nofollow" href=`//zhihu.com/${theme.social.zhihu}`)
-        i.iconfont.icon-zhihu
 // 领英
 if (debugSNS || theme.social.linkedin)
     a(title="linkedin" target="_blank" rel="noopener nofollow" href=`//www.linkedin.com/in/${theme.social.linkedin}`)
@@ -26,3 +18,17 @@ if (debugSNS || theme.social.linkedin)
 if (debugSNS || theme.social.facebook)
     a(title="facebook" target="_blank" rel="noopener nofollow" href=`//www.facebook.com/${theme.social.facebook}`)
         i.iconfont.icon-tian7_facebook
+        
+// mail
+if (debugSNS || theme.social.mail)
+    a(title="mail" target="_blank" rel="noopener nofollow" href=`mailto:${theme.social.mail}`)
+        i.fa.fa-solid.fa-envelope-open
+// whatsapp
+if (debugSNS || theme.social.whatsapp)
+    a(title="whatsapp" target="_blank" rel="noopener nofollow" href=`//wa.me/${theme.social.phone}`)
+        i.fa.fa-brands.fa-whatsapp
+// telegram
+if (debugSNS || theme.social.telegram)
+    a(title="telegram" target="_blank" rel="noopener nofollow" href=`//t.me/${theme.social.telegram}`)
+        i.fa.fa-brands.fa-telegram
+        

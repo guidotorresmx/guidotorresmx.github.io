@@ -134,7 +134,8 @@
     overflow: auto;
     padding: 5px 0;
     margin-top: 15px;
-    border-top: 1px solid var(--border-line-color); }
+    border-top: 1px solid var(--border-line-color);
+    flex-wrap: wrap; }
     .post-container .profile-widget .sns-container i {
       margin: 0 8px;
       font-size: 30px; }

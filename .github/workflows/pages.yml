@@ -31,7 +31,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
-        publish_branch: website  # deploying branch
+        publish_branch: main  # deploying branch
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:

@@ -59,8 +59,10 @@ After creating the bucket, select it and go to __properties__, the navigate to t
 
 ![AWS S3 Bucket template](bucket-template.png)
 
+and navigate to translate
+
 # Wrapping up
-Once everything is done, you could upload a simple index.html file to your bucket and view it rendered when visiting the site of your bucket. This is nice, but we are far from done and ~~I'm falling asleep~~ I don't want you to get overwhelmed, so this walkthrough will become a series of 4 parts 🤷‍♂️💁.   
+Once everything is done, you could upload a simple index.html file to your bucket and view it rendered when visiting the site of your bucket. This is nice, but we are far from done and ~~I'm falling asleep~~ I don't want you to get you overwhelmed, so this walkthrough will become a series of 4 parts 🤷‍♂️💁.   
 
 
 [aws]: https://console.aws.amazon.com/console/ "aws console"

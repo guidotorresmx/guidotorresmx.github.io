@@ -1,6 +1,6 @@
 ---
 title: "Deploying static websites with S3 and Github actions: Part I"
-date: 2021-10-30 04:55:39
+date: 2021-11-07 04:55:39
 id: 1635584139
 tags:
   - hexo
@@ -16,7 +16,7 @@ categories:
 keywords: hexo, github, aws, s3
 description: description
 ---
----
+
 # Intro
 Once your awesome Hexo static website is up and running, you may want to deploy it so everybody on the internet can actually read it. fortunately, there are multiple choices, but being myself a humble AWS ~~brainwashed~~ enthusiast, I'm going to introduce you to the github + github actions + route53 + s3 + CloudFront.
 
@@ -54,12 +54,14 @@ The next step is quite easy, just navigate to S3 by search for it in the omnibar
 ![AWS S3 Bucket creation](bucket.png)
 ![AWS S3 Bucket options](bucket-options.png)
 
-## Step 5: Setup Bucket for S3 static website hosting
+## Step 5: Buckets and S3 static website hosting
 After creating the bucket, select it and go to __properties__, the navigate to the bottom of the site until the __static website hosting__ section shows up. Edit it and update the fields with the same info showed in the next image:
 
 ![AWS S3 Bucket template](bucket-template.png)
 
-and navigate to translate
+## Step 6: Bucket vs public access
+
+Once
 
 # Wrapping up
 Once everything is done, you could upload a simple index.html file to your bucket and view it rendered when visiting the site of your bucket. This is nice, but we are far from done and ~~I'm falling asleep~~ I don't want you to get you overwhelmed, so this walkthrough will become a series of 4 parts 🤷‍♂️💁.   

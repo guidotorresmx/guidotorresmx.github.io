@@ -1,4 +1,5 @@
 @import url("//at.alicdn.com/t/font_2266068_otkvzqnxk0g.css");
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 :root.appearance-light {
   --primary-bg-color: #fff;
   --second-bg-color: #fff;
@@ -117,7 +118,14 @@
     border-top: 1px solid rgba(0, 0, 0, 0.05); }
     :root body > footer .sns-container .iconfont {
       margin: 0 5px;
-      font-size: 30px; }
+      font-size: 30px;
+      background-color: #eee;
+      border-radius: 50%; }
+    :root body > footer .sns-container .fa {
+      margin: 0 5px;
+      font-size: 30px;
+      background-color: #eee;
+      border-radius: 50%; }
 
 .header-widget {
   position: fixed;

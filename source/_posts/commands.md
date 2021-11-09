@@ -1,13 +1,13 @@
 ---
 title: commands
+date: 2021-11-02 16:55:44
 tags: [hexo, website, blog]
-categories: 
-- [frontend]
+categories:
 - [hexo]
 - [cheatsheets]
 ---
 
-This is a repost from [hexo's website](https://hexo.io/docs/commands.html). 
+This is a repost from [hexo's website](https://hexo.io/docs/commands.html).
 
 ## init
 

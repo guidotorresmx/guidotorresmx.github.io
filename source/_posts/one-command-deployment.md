@@ -1,8 +1,8 @@
 ---
 title: One-Command Deployment
+date: 2021-11-02 16:55:44
 tags: [hexo, website, blog]
-categories: 
-- [frontend]
+categories:
 - [hexo]
 - [cheatsheets]
 ---

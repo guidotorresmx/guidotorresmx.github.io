@@ -1,8 +1,8 @@
 ---
 title: GitHub Pages
+date: 2021-11-02 16:55:44
 tags: [hexo, website, blog]
-categories: 
-- [frontend]
+categories:
 - [hexo]
 - [cheatsheets]
 ---
@@ -28,7 +28,7 @@ In this tutorial, we use [GitHub Actions](https://docs.github.com/en/actions) to
 {% endcodeblock %}
 
 3. Push the files of your Hexo folder to the **`source` branch** of your repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter), without the `.gitmodules` file.
-  
+
 - To push `source` to GitHub:
 
   ```

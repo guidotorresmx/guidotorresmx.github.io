@@ -1,5 +1,5 @@
 ---
-title: Deploying static websites with S3 and Github actions: Part I
+title: "Deploying static websites with S3 and Github actions: Part I"
 date: 2021-10-30 04:55:39
 id: 1635584139
 tags:

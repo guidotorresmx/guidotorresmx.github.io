@@ -3,7 +3,6 @@ menu:
   Home: /
   About: /about
   Archive: /archives
-  Opinions: /opinions
 
 widgets:
   - tag

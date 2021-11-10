@@ -26,7 +26,7 @@ user:
   name: Marco Guido
   avatar: /images/avatar.jpg
   location: Toronto, ON
-  description: Programming, electronics and stuff
+  description: Programming, opinions and stuff
   footnotes: # footnotes
 
 # documents: https://github.com/utterance/utterances
@@ -63,4 +63,4 @@ ga_domain:
 ba_track_id:
 
 # picture of about page
-about_pic: about.png
+about_pic: about.jpg

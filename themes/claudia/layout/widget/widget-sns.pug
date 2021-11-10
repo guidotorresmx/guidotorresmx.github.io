@@ -23,10 +23,12 @@ if (debugSNS || theme.social.facebook)
 if (debugSNS || theme.social.mail)
     a(title="mail" target="_blank" rel="noopener nofollow" href=`mailto:${theme.social.mail}`)
         i.fa.fa-solid.fa-envelope-open
+
 // whatsapp
 if (debugSNS || theme.social.whatsapp)
     a(title="whatsapp" target="_blank" rel="noopener nofollow" href=`//wa.me/${theme.social.phone}`)
         i.fa.fa-brands.fa-whatsapp
+
 // telegram
 if (debugSNS || theme.social.telegram)
     a(title="telegram" target="_blank" rel="noopener nofollow" href=`//t.me/${theme.social.telegram}`)

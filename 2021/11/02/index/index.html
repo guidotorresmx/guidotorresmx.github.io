@@ -35,18 +35,18 @@ What is Hexo?Hexo is a fast, simple and powerful blog framework. You write posts
 <p>If you encounter <code>EACCES</code> permission error when trying to install Hexo, please follow <a target="_blank" rel="noopener" href="https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally">the workaround</a> provided by npmjs; overriding with root/sudo is highly discouraged.</p>
 <p>If you installed Node.js using Snap, you may need to manually run <code>npm install</code> in the target folder when <a href="/docs/commands#init">initializing</a> a blog.</p>
 <h3 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h3><p>Once all the requirements are installed, you can install Hexo with npm:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="bash">$ npm install -g hexo-cli
+</code></pre>
 <h3 id="Advanced-installation-and-usage"><a href="#Advanced-installation-and-usage" class="headerlink" title="Advanced installation and usage"></a>Advanced installation and usage</h3><p>Advanced users may prefer to install and use <code>hexo</code> package instead.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo</span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="bash">$ npm install hexo
+</code></pre>
 <p>Once installed, you can run Hexo in two ways:</p>
 <ol>
 <li><code>npx hexo &lt;command&gt;</code></li>
 <li>Linux users can set relative path of <code>node_modules/</code> folder:</li>
 </ol>
-  <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'PATH="$PATH:./node_modules/.bin"'</span> &gt;&gt; ~/.profile</span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="bash">echo 'PATH="$PATH:./node_modules/.bin"' &gt;&gt; ~/.profile
+</code></pre>
 <p>  then run Hexo using <code>hexo &lt;command&gt;</code></p>
 <h3 id="Minimum-required-Node-js-version"><a href="#Minimum-required-Node-js-version" class="headerlink" title="Minimum required Node.js version"></a>Minimum required Node.js version</h3><p>If you are stuck with older Node.js, you can consider installing a past version of Hexo.</p>
 <p>Please note we do not provide bugfixes to past versions of Hexo.</p>

@@ -9,20 +9,65 @@ Create a repo named username.github.io, where username is your username on GitHu
 <li>Create a repo named <b><em>username</em>.github.io</b>, where username is your username on GitHub. If you have already uploaded to other repo, rename the repo instead.</li>
 <li>Add the following <em>highlighted</em> lines to <code>package.json</code>: (skip this step if there are existing lines)</li>
 </ol>
-<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line marked">  <span class="attr">"scripts"</span>: {</span><br><span class="line marked">    <span class="attr">"build"</span>: <span class="string">"hexo generate"</span></span><br><span class="line marked">  },</span><br><span class="line">  <span class="attr">"hexo"</span>: {</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"5.0.0"</span></span><br><span class="line">  },</span><br><span class="line">  <span class="attr">"dependencies"</span>: {</span><br><span class="line">    <span class="attr">"hexo"</span>: <span class="string">"^5.0.0"</span>,</span><br><span class="line">    ...</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>{
+  "scripts": {
+    "build": "hexo generate"
+  },
+  "hexo": {
+    "version": "5.0.0"
+  },
+  "dependencies": {
+    "hexo": "^5.0.0",
+    ...
+  }
+}</code></pre>
 
 <ol start="3">
 <li>Push the files of your Hexo folder to the <strong><code>source</code> branch</strong> of your repository. The <code>public/</code> folder is not (and should not be) uploaded by default, make sure the <code>.gitignore</code> file contains <code>public/</code> line. The folder structure should be roughly similar to <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-starter">this repo</a>, without the <code>.gitmodules</code> file.</li>
 </ol>
 <ul>
 <li><p>To push <code>source</code> to GitHub:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin source</span><br></pre></td></tr></tbody></table></figure></li>
+<pre><code>$ git push origin source
+</code></pre>
+</li>
 </ul>
 <ol start="4">
 <li>Add <code>.github/workflows/pages.yml</code> file to your repo with the following content:</li>
 </ol>
-<figure class="highlight yml"><figcaption><span>.github/workflows/pages.yml</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">source</span>  <span class="comment"># default branch</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">pages:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="number">12.</span><span class="string">x</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">'12.x'</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">NPM</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">${{</span> <span class="string">runner.OS</span> <span class="string">}}-npm-cache</span></span><br><span class="line">          <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line"><span class="string">            ${{ runner.OS }}-npm-cache</span></span><br><span class="line"><span class="string"></span>      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">${{</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">}}</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br><span class="line">          <span class="attr">publish_branch:</span> <span class="string">master</span>  <span class="comment"># deploying branch</span></span><br></pre></td></tr></tbody></table></figure>
+<pre><code class="yml">name: Pages
 
+on:
+  push:
+    branches:
+      - source  # default branch
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: master  # deploying branch
+</code></pre>
 <ol start="5">
 <li>Once the deployment is finished, the generated pages can be found in the <code>master</code> branch of your repository</li>
 <li>In your GitHub repo’s setting, navigate to “GitHub Pages” section and change Source to <strong>master branch</strong>.</li>
@@ -35,14 +80,34 @@ Create a repo named username.github.io, where username is your username on GitHu
 <li>Edit your <strong>_config.yml</strong>, change the <code>root:</code> value to the <code>/&lt;repository&gt;/</code> (must starts and ends with a slash, without the brackets).</li>
 <li>Modify the following lines in <code>.github/workflows/pages.yml</code>:</li>
 </ol>
-<figure class="highlight diff"><figcaption><span>.github/workflows/pages.yml</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">name: Pages</span><br><span class="line"></span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line"><span class="deletion">-      - source  # default branch</span></span><br><span class="line"><span class="addition">+      - master</span></span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  pages:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      - name: Deploy</span><br><span class="line">        uses: peaceiris/actions-gh-pages@v3</span><br><span class="line">        with:</span><br><span class="line">          github_token: ${{ secrets.GITHUB_TOKEN }}</span><br><span class="line">          publish_dir: ./public</span><br><span class="line"><span class="deletion">-          publish_branch: master  # deploying branch</span></span><br><span class="line"><span class="addition">+          publish_branch: gh-pages</span></span><br></pre></td></tr></tbody></table></figure>
+<pre><code class="diff">name: Pages
 
+on:
+  push:
+    branches:
+-      - source  # default branch
++      - master
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+-          publish_branch: master  # deploying branch
++          publish_branch: gh-pages
+</code></pre>
 <ol start="4">
 <li>Commit and push to <strong><code>master</code> branch</strong>.</li>
 </ol>
 <ul>
 <li><p>To push <code>master</code> branch to GitHub:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></tbody></table></figure></li>
+<pre><code>$ git push origin master
+</code></pre>
+</li>
 </ul>
 <ol start="5">
 <li>Once the deployment is finished, the generated pages can be found in the <code>gh-pages</code> branch of your repository</li>
@@ -53,8 +118,12 @@ Create a repo named username.github.io, where username is your username on GitHu
 <li>Install <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a>.</li>
 <li>Add the following configurations to <strong>_config.yml</strong>, (remove existing lines if any)</li>
 </ol>
-  <figure class="highlight yml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/&lt;username&gt;/&lt;project&gt;</span></span><br><span class="line">  <span class="comment"># example, https://github.com/hexojs/hexojs.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="yml">deploy:
+  type: git
+  repo: https://github.com/&lt;username&gt;/&lt;project&gt;
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: gh-pages
+</code></pre>
 <ol start="3">
 <li>Run <code>hexo clean &amp;&amp; hexo deploy</code>.</li>
 <li>Check the webpage at <em>username</em>.github.io.</li>

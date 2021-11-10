@@ -91,10 +91,15 @@ Published month of posts (Without leading zeros)
 </tr>
 </tbody></table>
 <p>You can define the default value of each variable in the permalink through the <code>permalink_defaults</code> setting:</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="string">en</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight yaml"><figcaption><span>source/_posts/hello-world.md</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013-07-14 17:01:34</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">foo</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">bar</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="yaml">permalink_defaults:
+  lang: en
+</code></pre>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><pre><code class="yaml">title: Hello World
+date: 2013-07-14 17:01:34
+categories:
+- foo
+- bar
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -119,8 +124,12 @@ Published month of posts (Without leading zeros)
 <td>hello-world-a2c8ac003b43/</td>
 </tr>
 </tbody></table>
-<figure class="highlight yaml"><figcaption><span>source/_posts/lorem/hello-world.md</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013-07-14 17:01:34</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">foo</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">bar</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="yaml">title: Hello World
+date: 2013-07-14 17:01:34
+categories:
+- foo
+- bar
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -138,11 +147,14 @@ Published month of posts (Without leading zeros)
 </tr>
 </tbody></table>
 <h3 id="Multi-language-Support"><a href="#Multi-language-Support" class="headerlink" title="Multi-language Support"></a>Multi-language Support</h3><p>To create a multi-language site, you can modify the <code>new_post_name</code> and <code>permalink</code> settings like this:</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">new_post_name:</span> <span class="string">:lang/:title.md</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:lang/:title/</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="yaml">new_post_name: :lang/:title.md
+permalink: :lang/:title/
+</code></pre>
 <p>When you create a new post, the post will be saved to:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"Hello World"</span> --lang tw</span><br><span class="line"><span class="comment"># =&gt; source/_posts/tw/Hello-World.md</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="bash">$ hexo new "Hello World" --lang tw
+# =&gt; source/_posts/tw/Hello-World.md
+</code></pre>
 <p>and the URL will be:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000/tw/hello-world/</span><br></pre></td></tr></tbody></table></figure>
+<pre><code class="plain">http://localhost:4000/tw/hello-world/
+</code></pre>
 </article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2021/11/02/one-command-deployment/" title="One-Command Deployment"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: One-Command Deployment</span></a><a class="button is-default" href="/2021/11/02/plugins/" title="Plugins"><span class="has-text-weight-semibold">Next: Plugins</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="guidotorresmx" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com/guidotorresmx"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/guidotorresmx"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/guidotorresmx"><i class="iconfont icon-ins"></i></a><!-- 领英--><a title="linkedin" target="_blank" rel="noopener nofollow" href="//www.linkedin.com/in/guidotorresmx"><i class="iconfont icon-linkedin"></i></a><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/guidotorresmx"><i class="iconfont icon-tian7_facebook"></i></a><!-- mail--><a title="mail" target="_blank" rel="noopener nofollow" href="mailto:marco@guidotorres.mx"><i class="fa fa-solid fa-envelope-open"></i></a><!-- whatsapp--><a title="whatsapp" target="_blank" rel="noopener nofollow" href="//wa.me/16479066194"><i class="fa fa-brands fa-whatsapp"></i></a><!-- telegram--><a title="telegram" target="_blank" rel="noopener nofollow" href="//t.me/guidotorresmx"><i class="fa fa-brands fa-telegram"></i></a></section><p><span>Copyright ©</span><span> Marco Guido 2021</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/post.js"></script></body></html>

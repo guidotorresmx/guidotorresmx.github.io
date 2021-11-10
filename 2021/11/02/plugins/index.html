@@ -7,11 +7,17 @@ ScriptIf your plugin is relatively simple, it’s recommended to use a script. A
 <h3 id="Script"><a href="#Script" class="headerlink" title="Script"></a>Script</h3><p>If your plugin is relatively simple, it’s recommended to use a script. All you need to do is put your JavaScript files in the <code>scripts</code> folder and Hexo will load them during initialization.</p>
 <h3 id="Plugin"><a href="#Plugin" class="headerlink" title="Plugin"></a>Plugin</h3><p>If your code is complicated or if you want to publish it to the NPM registry, we recommend using a plugin. First, create a folder in the <code>node_modules</code> folder. The name of this folder must begin with <code>hexo-</code> or Hexo will ignore it.</p>
 <p>Your new folder must contain at least two files: one containing the actual JavaScript code and one <code>package.json</code> file that describes the purpose of the plugin and sets its dependencies.</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── index.js</span><br><span class="line">└── package.json</span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="plain">.
+├── index.js
+└── package.json
+</code></pre>
 <p>At the very least, you should set the <code>name</code>, <code>version</code> and <code>main</code> entries in <code>package.json</code>. For example:</p>
-<figure class="highlight json"><figcaption><span>package.json</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-my-plugin"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.1"</span>,</span><br><span class="line">  <span class="attr">"main"</span>: <span class="string">"index"</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="json">{
+  "name": "hexo-my-plugin",
+  "version": "0.0.1",
+  "main": "index"
+}
+</code></pre>
 <p>You’ll also need to list your plugin as a dependency in the root <code>package.json</code> of your hexo instance in order for Hexo to detect and load it.</p>
 <h3 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h3><p>You can make use of the official tools provided by Hexo to accelerate development:</p>
 <ul>
@@ -25,9 +31,17 @@ ScriptIf your plugin is relatively simple, it’s recommended to use a script. A
 <li><p>Fork <a target="_blank" rel="noopener" href="https://github.com/hexojs/site">hexojs/site</a></p>
 </li>
 <li><p>Clone the repository to your computer and install dependencies.</p>
- <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/&lt;username&gt;/site.git</span><br><span class="line">$ cd site</span><br><span class="line">$ npm install</span><br></pre></td></tr></tbody></table></figure></li>
+ <pre><code>$ git clone https://github.com/&lt;username&gt;/site.git
+$ cd site
+$ npm install</code></pre></li>
 <li><p>Edit <code>source/_data/plugins.yml</code> and add your plugin. For example:</p>
- <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- name: hexo-server</span><br><span class="line">  description: Server module for Hexo.</span><br><span class="line">  link: https://github.com/hexojs/hexo-server</span><br><span class="line">  tags:</span><br><span class="line">    - official</span><br><span class="line">    - server</span><br><span class="line">    - console</span><br></pre></td></tr></tbody></table></figure></li>
+ <pre><code>- name: hexo-server
+  description: Server module for Hexo.
+  link: https://github.com/hexojs/hexo-server
+  tags:
+    - official
+    - server
+    - console</code></pre></li>
 <li><p>Push the branch.</p>
 </li>
 <li><p>Create a pull request and describe the change.</p>

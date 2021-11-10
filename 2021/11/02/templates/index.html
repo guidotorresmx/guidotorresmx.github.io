@@ -78,37 +78,49 @@ Cat.."><meta name="generator" content="Hexo 5.4.0">
 </tr>
 </tbody></table>
 <h2 id="Layouts"><a href="#Layouts" class="headerlink" title="Layouts"></a>Layouts</h2><p>When pages share a similar structure - for instance, when two templates have both a header and a footer - you can consider using a <code>layout</code> to declare these structural similarities. Every layout file should contain a <code>body</code> variable to display the contents of the template in question. For example:</p>
-<figure class="highlight html"><figcaption><span>index.ejs</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight html"><figcaption><span>layout.ejs</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>&lt;%- body %&gt;<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="html">index
+</code></pre>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;&lt;%- body %&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 <p>yields:</p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>index<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;index&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 <p>By default, the <code>layout</code> template is used by all other templates. You can specify additional layouts in the front-matter or set it to <code>false</code> to disable it. It’s even possible to build a complex nested structure by including more layout templates in your top layout.</p>
 <h2 id="Partials"><a href="#Partials" class="headerlink" title="Partials"></a>Partials</h2><p>Partials are useful for sharing components between your templates. Typical examples include headers, footers or sidebars. You may want to put your partials in separate files to make maintaining your website significantly more convenient. For example:</p>
-<figure class="highlight html"><figcaption><span>partial/header.ejs</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"logo"</span>&gt;</span>&lt;%= config.title %&gt;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight html"><figcaption><span>index.ejs</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial('partial/header') %&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span>Home page<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="html">&lt;h1 id="logo"&gt;&lt;%= config.title %&gt;&lt;/h1&gt;
+</code></pre>
+<pre><code class="html">&lt;%- partial('partial/header') %&gt;
+&lt;div id="content"&gt;Home page&lt;/div&gt;
+</code></pre>
 <p>yields:</p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"logo"</span>&gt;</span>My Site<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span>Home page<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="html">&lt;h1 id="logo"&gt;My Site&lt;/h1&gt;
+&lt;div id="content"&gt;Home page&lt;/div&gt;
+</code></pre>
 <h2 id="Local-Variables"><a href="#Local-Variables" class="headerlink" title="Local Variables"></a>Local Variables</h2><p>You can define local variables in templates and use them in other templates.</p>
-<figure class="highlight html"><figcaption><span>partial/header.ejs</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"logo"</span>&gt;</span>&lt;%= title %&gt;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight html"><figcaption><span>index.ejs</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial('partial/header', {title: 'Hello World'}) %&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span>Home page<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="html">&lt;h1 id="logo"&gt;&lt;%= title %&gt;&lt;/h1&gt;
+</code></pre>
+<pre><code class="html">&lt;%- partial('partial/header', {title: 'Hello World'}) %&gt;
+&lt;div id="content"&gt;Home page&lt;/div&gt;
+</code></pre>
 <p>yields:</p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"logo"</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span>Home page<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="html">&lt;h1 id="logo"&gt;Hello World&lt;/h1&gt;
+&lt;div id="content"&gt;Home page&lt;/div&gt;
+</code></pre>
 <h2 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h2><p>If your theme is exceedingly complex or if the number of files to generate becomes too large, Hexo’s file generation performance may begin to decrease considerably. Aside from simplifying your theme, you may also try Fragment Caching, which was introduced in Hexo 2.7.</p>
 <p>This feature was borrowed from <a target="_blank" rel="noopener" href="http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching">Ruby on Rails</a>. It causes content to be saved as fragments and cached for when additional requests are made. This can reduce the number of database queries and can also speed up file generation.</p>
 <p>Fragment caching is best used for headers, footers, sidebars or other static content that is unlikely to change from template to template. For example:</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- fragment_cache(<span class="string">'header'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'&lt;header&gt;&lt;/header&gt;'</span>;</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="js">&lt;%- fragment_cache('header', function(){
+  return '&lt;header&gt;&lt;/header&gt;';
+});
+</code></pre>
 <p>Though it may be easier to use partials:</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial(<span class="string">'header'</span>, {}, {<span class="attr">cache</span>: <span class="literal">true</span>});</span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="js">&lt;%- partial('header', {}, {cache: true});
+</code></pre>
 <p><code>fragment_cache()</code> will cache the rendered result and output the cached result to other pages. This should only be used on partials that are expected <strong>not</strong> to change across different pages. Otherwise, it should <strong>not</strong> be enabled.<br>For example, it should be disabled when <code>relative_link</code> is enabled in the config. This is because relative links may appear differently across pages.</p>
 </article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2021/11/02/tag-plugins/" title="Tag Plugins"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: Tag Plugins</span></a><a class="button is-default" href="/2021/11/02/themes/" title="Themes"><span class="has-text-weight-semibold">Next: Themes</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="guidotorresmx" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com/guidotorresmx"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/guidotorresmx"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/guidotorresmx"><i class="iconfont icon-ins"></i></a><!-- 领英--><a title="linkedin" target="_blank" rel="noopener nofollow" href="//www.linkedin.com/in/guidotorresmx"><i class="iconfont icon-linkedin"></i></a><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/guidotorresmx"><i class="iconfont icon-tian7_facebook"></i></a><!-- mail--><a title="mail" target="_blank" rel="noopener nofollow" href="mailto:marco@guidotorres.mx"><i class="fa fa-solid fa-envelope-open"></i></a><!-- whatsapp--><a title="whatsapp" target="_blank" rel="noopener nofollow" href="//wa.me/16479066194"><i class="fa fa-brands fa-whatsapp"></i></a><!-- telegram--><a title="telegram" target="_blank" rel="noopener nofollow" href="//t.me/guidotorresmx"><i class="fa fa-brands fa-telegram"></i></a></section><p><span>Copyright ©</span><span> Marco Guido 2021</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/post.js"></script></body></html>

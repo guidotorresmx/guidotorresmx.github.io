@@ -114,8 +114,11 @@ The language of your website. Use a 2.."><meta name="generator" content="Hexo 5.
 </tr>
 </tbody></table>
 <p>Examples:</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># e.g. page.permalink is http://example.com/foo/bar/index.html</span></span><br><span class="line"><span class="attr">pretty_urls:</span></span><br><span class="line">  <span class="attr">trailing_index:</span> <span class="literal">false</span></span><br><span class="line"><span class="comment"># becomes http://example.com/foo/bar/</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="yaml"># e.g. page.permalink is http://example.com/foo/bar/index.html
+pretty_urls:
+  trailing_index: false
+# becomes http://example.com/foo/bar/
+</code></pre>
 <h3 id="Directory"><a href="#Directory" class="headerlink" title="Directory"></a>Directory</h3><table>
 <thead>
 <tr>
@@ -166,8 +169,13 @@ The language of your website. Use a 2.."><meta name="generator" content="Hexo 5.
 </tr>
 </tbody></table>
 <p>Examples:</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">skip_render:</span> <span class="string">"mypage/**/*"</span></span><br><span class="line"><span class="comment"># will output `source/mypage/index.html` and `source/mypage/code.js` without altering them.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## This also can be used to exclude posts,</span></span><br><span class="line"><span class="attr">skip_render:</span> <span class="string">"_posts/test-post.md"</span></span><br><span class="line"><span class="comment"># will ignore the `source/_posts/test-post.md`.</span></span><br></pre></td></tr></tbody></table></figure>
+<pre><code class="yaml">skip_render: "mypage/**/*"
+# will output `source/mypage/index.html` and `source/mypage/code.js` without altering them.
 
+## This also can be used to exclude posts,
+skip_render: "_posts/test-post.md"
+# will ignore the `source/_posts/test-post.md`.
+</code></pre>
 <h3 id="Writing"><a href="#Writing" class="headerlink" title="Writing"></a>Writing</h3><table>
 <thead>
 <tr>
@@ -357,8 +365,12 @@ The language of your website. Use a 2.."><meta name="generator" content="Hexo 5.
 </tr>
 </tbody></table>
 <p>Examples:</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">pagination_dir:</span> <span class="string">'page'</span></span><br><span class="line"><span class="comment"># http://example.com/page/2</span></span><br><span class="line"></span><br><span class="line"><span class="attr">pagination_dir:</span> <span class="string">'awesome-page'</span></span><br><span class="line"><span class="comment"># http://example.com/awesome-page/2</span></span><br></pre></td></tr></tbody></table></figure>
+<pre><code class="yaml">pagination_dir: 'page'
+# http://example.com/page/2
 
+pagination_dir: 'awesome-page'
+# http://example.com/awesome-page/2
+</code></pre>
 <h3 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h3><table>
 <thead>
 <tr>
@@ -406,14 +418,49 @@ The language of your website. Use a 2.."><meta name="generator" content="Hexo 5.
 </tr>
 </tbody></table>
 <p>Examples:</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Include/Exclude Files/Folders</span></span><br><span class="line"><span class="attr">include:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">".nojekyll"</span></span><br><span class="line">  <span class="comment"># Include 'source/css/_typing.css'.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">"css/_typing.css"</span></span><br><span class="line">  <span class="comment"># Include any file in 'source/_css/'.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">"_css/*"</span></span><br><span class="line">  <span class="comment"># Include any file and subfolder in 'source/_css/'.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">"_css/**/*"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">exclude:</span></span><br><span class="line">  <span class="comment"># Exclude 'source/js/test.js'.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">"js/test.js"</span></span><br><span class="line">  <span class="comment"># Exclude any file in 'source/js/'.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">"js/*"</span></span><br><span class="line">  <span class="comment"># Exclude any file and subfolder in 'source/js/'.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">"js/**/*"</span></span><br><span class="line">  <span class="comment"># Exclude any file with filename that starts with 'test' in 'source/js/'.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">"js/test*"</span></span><br><span class="line">  <span class="comment"># Exclude any file with filename that starts with 'test' in 'source/js/' and its subfolders.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">"js/**/test*"</span></span><br><span class="line">  <span class="comment"># Do not use this to exclude posts in the 'source/_posts/'.</span></span><br><span class="line">  <span class="comment"># Use skip_render for that. Or prepend an underscore to the filename.</span></span><br><span class="line">  <span class="comment"># - "_posts/hello-world.md" # Does not work.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">ignore:</span></span><br><span class="line">  <span class="comment"># Ignore any folder named 'foo'.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">"**/foo"</span></span><br><span class="line">  <span class="comment"># Ignore 'foo' folder in 'themes/' only.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">"**/themes/*/foo"</span></span><br><span class="line">  <span class="comment"># Same as above, but applies to every subfolders of 'themes/'.</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">"**/themes/**/foo"</span></span><br></pre></td></tr></tbody></table></figure>
+<pre><code class="yaml"># Include/Exclude Files/Folders
+include:
+  - ".nojekyll"
+  # Include 'source/css/_typing.css'.
+  - "css/_typing.css"
+  # Include any file in 'source/_css/'.
+  - "_css/*"
+  # Include any file and subfolder in 'source/_css/'.
+  - "_css/**/*"
 
+exclude:
+  # Exclude 'source/js/test.js'.
+  - "js/test.js"
+  # Exclude any file in 'source/js/'.
+  - "js/*"
+  # Exclude any file and subfolder in 'source/js/'.
+  - "js/**/*"
+  # Exclude any file with filename that starts with 'test' in 'source/js/'.
+  - "js/test*"
+  # Exclude any file with filename that starts with 'test' in 'source/js/' and its subfolders.
+  - "js/**/test*"
+  # Do not use this to exclude posts in the 'source/_posts/'.
+  # Use skip_render for that. Or prepend an underscore to the filename.
+  # - "_posts/hello-world.md" # Does not work.
+
+ignore:
+  # Ignore any folder named 'foo'.
+  - "**/foo"
+  # Ignore 'foo' folder in 'themes/' only.
+  - "**/themes/*/foo"
+  # Same as above, but applies to every subfolders of 'themes/'.
+  - "**/themes/**/foo"
+</code></pre>
 <p>Each value in the list must be enclosed with single/double quotes.</p>
 <p><code>include:</code> and <code>exclude:</code> do not apply to the <code>themes/</code> folder. Either use <code>ignore:</code> or alternatively, prepend an underscore to the file/folder name to exclude.</p>
 <p>* Notable exception is the <code>source/_posts</code> folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using <code>include:</code> rule in that folder is not recommended.</p>
 <h3 id="Using-an-Alternate-Config"><a href="#Using-an-Alternate-Config" class="headerlink" title="Using an Alternate Config"></a>Using an Alternate Config</h3><p>A custom config file path can be specified by adding the <code>--config</code> flag to your <code>hexo</code> commands with a path to an alternate YAML or JSON config file, or a comma-separated list (no spaces) of multiple YAML or JSON files.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># use 'custom.yml' in place of '_config.yml'</span></span><br><span class="line">$ hexo server --config custom.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># use 'custom.yml' &amp; 'custom2.json', prioritizing 'custom2.json'</span></span><br><span class="line">$ hexo server --config custom.yml,custom2.json</span><br></pre></td></tr></tbody></table></figure>
+<pre><code class="bash"># use 'custom.yml' in place of '_config.yml'
+$ hexo server --config custom.yml
 
+# use 'custom.yml' &amp; 'custom2.json', prioritizing 'custom2.json'
+$ hexo server --config custom.yml,custom2.json
+</code></pre>
 <p>Using multiple files combines all the config files and saves the merged settings to <code>_multiconfig.yml</code>. The later values take precedence. It works with any number of JSON and YAML files with arbitrarily deep objects. Note that <strong>no spaces are allowed in the list</strong>.</p>
 <p>For instance, in the above example if <code>foo: bar</code> is in <code>custom.yml</code>, but <code>"foo": "dinosaur"</code> is in <code>custom2.json</code>, <code>_multiconfig.yml</code> will contain <code>foo: dinosaur</code>.</p>
 <h3 id="Alternate-Theme-Config"><a href="#Alternate-Theme-Config" class="headerlink" title="Alternate Theme Config"></a>Alternate Theme Config</h3><p>Hexo themes are independent projects, with separate <code>_config.yml</code> files.</p>
@@ -422,26 +469,57 @@ The language of your website. Use a 2.."><meta name="generator" content="Hexo 5.
 <blockquote>
 <p>Supported since Hexo 2.8.2</p>
 </blockquote>
-<figure class="highlight yml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.yml</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">"my-theme"</span></span><br><span class="line"><span class="attr">theme_config:</span></span><br><span class="line">  <span class="attr">bio:</span> <span class="string">"My awesome bio"</span></span><br><span class="line">  <span class="attr">foo:</span></span><br><span class="line">    <span class="attr">bar:</span> <span class="string">'a'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight yml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># themes/my-theme/_config.yml</span></span><br><span class="line"><span class="attr">bio:</span> <span class="string">"Some generic bio"</span></span><br><span class="line"><span class="attr">logo:</span> <span class="string">"a-cool-image.png"</span></span><br><span class="line">  <span class="attr">foo:</span></span><br><span class="line">    <span class="attr">baz:</span> <span class="string">'b'</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="yml"># _config.yml
+theme: "my-theme"
+theme_config:
+  bio: "My awesome bio"
+  foo:
+    bar: 'a'
+</code></pre>
+<pre><code class="yml"># themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
+</code></pre>
 <p>Resulting in theme configuration:</p>
-<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  bio: <span class="string">"My awesome bio"</span>,</span><br><span class="line">  logo: <span class="string">"a-cool-image.png"</span>,</span><br><span class="line">  foo: {</span><br><span class="line">    bar: <span class="string">"a"</span>,</span><br><span class="line">    baz: <span class="string">"b"</span></span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="json">{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
+}
+</code></pre>
 <p><strong>from a dedicated <code>_config.[theme].yml</code> file</strong></p>
 <blockquote>
 <p>Supported since Hexo 5.0.0</p>
 </blockquote>
 <p>The file should be placed in your site folder, both <code>yml</code> and <code>json</code> are supported. <code>theme</code> inside <code>_config.yml</code> must be configured for Hexo to read <code>_config.[theme].yml</code></p>
-<figure class="highlight yml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.yml</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">"my-theme"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight yml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.my-theme.yml</span></span><br><span class="line"><span class="attr">bio:</span> <span class="string">"My awesome bio"</span></span><br><span class="line"><span class="attr">foo:</span></span><br><span class="line">  <span class="attr">bar:</span> <span class="string">'a'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight yml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># themes/my-theme/_config.yml</span></span><br><span class="line"><span class="attr">bio:</span> <span class="string">"Some generic bio"</span></span><br><span class="line"><span class="attr">logo:</span> <span class="string">"a-cool-image.png"</span></span><br><span class="line">  <span class="attr">foo:</span></span><br><span class="line">    <span class="attr">baz:</span> <span class="string">'b'</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="yml"># _config.yml
+theme: "my-theme"
+</code></pre>
+<pre><code class="yml"># _config.my-theme.yml
+bio: "My awesome bio"
+foo:
+  bar: 'a'
+</code></pre>
+<pre><code class="yml"># themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
+</code></pre>
 <p>Resulting in theme configuration:</p>
-<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  bio: <span class="string">"My awesome bio"</span>,</span><br><span class="line">  logo: <span class="string">"a-cool-image.png"</span>,</span><br><span class="line">  foo: {</span><br><span class="line">    bar: <span class="string">"a"</span>,</span><br><span class="line">    baz: <span class="string">"b"</span></span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code class="json">{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
+}
+</code></pre>
 <p>We strongly recommend you to store your theme configuration in one place. But in case you have to store your theme configuration separately, you need to know the priority of those configurations: The <code>theme_config</code> inside site’s primary configuration file has the highest priority during merging, then the dedicated theme configuration file.<br>The <code>_config.yml</code> file under the theme directory has the lowest priority.</p>
 </article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2021/11/02/commands/" title="commands"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: commands</span></a><a class="button is-default" href="/2021/11/02/contributing/" title="Contributing"><span class="has-text-weight-semibold">Next: Contributing</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="guidotorresmx" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com/guidotorresmx"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/guidotorresmx"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/guidotorresmx"><i class="iconfont icon-ins"></i></a><!-- 领英--><a title="linkedin" target="_blank" rel="noopener nofollow" href="//www.linkedin.com/in/guidotorresmx"><i class="iconfont icon-linkedin"></i></a><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/guidotorresmx"><i class="iconfont icon-tian7_facebook"></i></a><!-- mail--><a title="mail" target="_blank" rel="noopener nofollow" href="mailto:marco@guidotorres.mx"><i class="fa fa-solid fa-envelope-open"></i></a><!-- whatsapp--><a title="whatsapp" target="_blank" rel="noopener nofollow" href="//wa.me/16479066194"><i class="fa fa-brands fa-whatsapp"></i></a><!-- telegram--><a title="telegram" target="_blank" rel="noopener nofollow" href="//t.me/guidotorresmx"><i class="fa fa-brands fa-telegram"></i></a></section><p><span>Copyright ©</span><span> Marco Guido 2021</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/post.js"></script></body></html>

@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Github Copilot</title>
+      <link href="/2021/11/10/github-copilot/"/>
+      <url>/2021/11/10/github-copilot/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h1><p>So, I’ve recently received my github copilot preview access and I wanted to use it ASAP, unfortunately, I didn’t have the opportunity to test it up until now, for which I feel very exited about, so I wanted to write a hands-on post on the topic.</p><h1 id="Have-you-got-the-preview-access"><a href="#Have-you-got-the-preview-access" class="headerlink" title="Have you got the preview access?"></a>Have you got the preview access?</h1><p>Once copilot is out, it will be available for everybody for a cheap price <del>selling your soul to the microsoft which I’d say is a reasonable price for the experience</del>, or maybe for free <del>if nobody pays for it</del>, but we’ll have to wait up until then.<br>fortunately I’ve already got my preview access approved, which can be confirmed by looking at the next screenshot, so I decided to make a guide on how to set everything up and add it to my tools repertory at once.</p><p><img src="/2021/11/10/github-copilot/preview-approval.png" alt="preview approval"></p><h1 id="Setting-everything-up"><a href="#Setting-everything-up" class="headerlink" title="Setting everything up"></a>Setting everything up</h1><h2 id="Getting-the-sauce"><a href="#Getting-the-sauce" class="headerlink" title="Getting the sauce"></a>Getting the sauce</h2><p>The installation process is quite straight forward, and it’s available for the most popular IDEs <strong>aka VSCODE, JetBrains and Neovim</strong> <del>this has to be a joke, where is atom???</del> which have demonstrated their value to the community in every occasion. Because I’m <del>not a soulless being</del> used to <strong>VSCODE</strong>, I’ll just set a new workspace in there. So first step is getting to the extensions page within VSCODE and look up for “Github Copilot Extension”.</p><p><img src="/2021/11/10/github-copilot/copilot-extension.png" alt="copilot extension"></p><h3 id="Signing-in"><a href="#Signing-in" class="headerlink" title="Signing in"></a>Signing in</h3><p>The extension will show a pop up in the bottom right side of your VSCODE window, where you’ll have to sign in with github, just click accept to everything that could come up after that and you’ll be okay.</p><p><img src="/2021/11/10/github-copilot/sign-in.png" alt="sign-in pop up"><br><img src="/2021/11/10/github-copilot/authorization.png" alt="authorization"></p><h3 id="First-usage"><a href="#First-usage" class="headerlink" title="First usage"></a>First usage</h3><p>The only thing left for you to do is to create a testing file. I’ll go by creating a <code>test.js</code> file and then start typing a function prototype, if everything works, a drop down suggestions attachment is going to show, there you’ll have to press <code>tab</code> to accept the suggestion.</p><p><img src="/2021/11/10/github-copilot/first-suggestion.png" alt="firs suggestion"><br><img src="/2021/11/10/github-copilot/accept-suggestion.png" alt="accept suggestion"></p><h3 id="Alternatives"><a href="#Alternatives" class="headerlink" title="Alternatives"></a>Alternatives</h3><p>If the first suggestion doesn’t fit your needs, you can press <code>Alt + ]</code> or <code>Alt + [</code> to navigate trough some more options or you can press <code>Ctrl + Enter</code> to open up a new panel where you can inspect all suggestions at once. You can Also add comments before your function declaration and copilot will take that into consideration in order to provide more accurate results</p><h3 id="Beyond-JS"><a href="#Beyond-JS" class="headerlink" title="Beyond JS"></a>Beyond JS</h3><p>Even tho copilot could be a great tool, it could not help anybody if the supported languages are limited to the top 3 most used languages <del>aka JS, Python and Matlab, amerite?</del>. So I tried to get a curated list of the supported file extensions for this preview stage and I could not find anything <del>Even tho I googled it once, seriously?</del> so I’ll dig deeper in a future article, but for the sake of demonstration, I created a bash file and OMG it actually worked.</p><p><img src="/2021/11/10/github-copilot/bash-file.png" alt="bash file"></p><h2 id="Wrapping-Up"><a href="#Wrapping-Up" class="headerlink" title="Wrapping Up"></a>Wrapping Up</h2><p>So copilot is actually working, but I’ll have to test it extensively before throwing up my opinion about its usability and possibilities. but I want to add that some people are quite worried because of this type of tool and the possibility of <del>everybody getting fired</del> reducing the amount of hours a programmer can actually work, but the thing is that the programmers daytime is not actually 100% programming, it is in fact mostly reading, debugging, setting up tools, coming up with ideas, communicate them; so for the time being I wouldn’t be worried because of this, specially because there are a hell lot more of important problems out there to worry about, such as: global warming, war, hunger and the sharknado’s saga. bye!</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> github </category>
+          
+          <category> tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+            <tag> vscode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Deploying static websites with S3 and Github actions: Part I</title>
       <link href="/2021/11/07/deploying-with-github-actions/"/>
       <url>/2021/11/07/deploying-with-github-actions/</url>

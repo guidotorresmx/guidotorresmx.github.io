@@ -61,7 +61,26 @@ After creating the bucket, select it and go to __properties__, the navigate to t
 
 ## Step 6: Bucket vs public access
 
-Once
+Once the bucket is set, you have to make it available for the outside world, so you have to specify the policies attached to it: go to permissions tab in your bucket and select edit under bucket policy, then copy the next policy in it (protip: replace <bucket-name> with your bucket's name).
+
+``` json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<bucket-name>/*"
+            ]
+        }
+    ]
+}
+```
 
 # Wrapping up
 Once everything is done, you could upload a simple index.html file to your bucket and view it rendered when visiting the site of your bucket. This is nice, but we are far from done and ~~I'm falling asleep~~ I don't want you to get you overwhelmed, so this walkthrough will become a series of 4 parts 🤷‍♂️💁.   

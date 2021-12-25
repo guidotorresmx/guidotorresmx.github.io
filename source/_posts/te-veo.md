@@ -8,8 +8,10 @@ tags:
 categories:
   - stuff
 keywords: te veo
-description: pequeño poema porque no puedo dejar de escuchar a José José
+description: pequeño poema que me ayudo a escribir alguien y que retomé porque no puedo dejar de escuchar a José José
 ---
+
+![AWS search bar and IAM](dark.jpg)
 
 Te veo caminar con estrellas amarradas a los talones,
 en este lugar donde duermen las semillas,

@@ -32,8 +32,10 @@
     <link rel="stylesheet" href="./css/background.css" />
     <link rel="stylesheet" href="./css/nav.css" />
     <link rel="stylesheet" href="./css/sections.css" />
+    <link rel="stylesheet" href="./css/scroller.css" />
+
     
-    <script defer src="./js/navHide.js"></script>
+    <script defer src="./js/scrolling.js"></script>
   
   </head>
 
@@ -68,16 +70,13 @@
                 <a class="nav-link" href="./blog/">Blog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./about/">About</a>
+                <a class="nav-link" href="./blog/about/">About</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./resume">Resume</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./react-recipes/">Recipes demo</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./presentation">Presentation demo</a>
             </li>
             
         </ul>
@@ -93,6 +92,9 @@
             </form>
         </div>
       </nav>
+      <div class="scroll-container">
+        <div id="scroll"></div>
+      </div>
       <main>
         <section id="section-intro">
           <div class="layer back">
@@ -116,7 +118,7 @@
           </div>
         </section>
       </main>
-      <footer class="footer bg-dark is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif">
+      <footer class="footer bg-dark is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif" id="footer">
         <div class="d-flex flex-column bd-highlight mb-3 justify-content-evenly min-100">
             <div class="container"><span class="text-muted">
                     <p><a title="twitter" href="//twitter.com/guidotorresmx"><i class="fa fa-brands fa-twitter icon"></i></a><!-- Github--><a title="github" href="//github.com/guidotorresmx"><i class="fa fa-brands fa-github icon"></i></a><!-- Ins--><a title="instagram" href="//www.instagram.com/guidotorresmx"><i class="fa fa-brands fa-instagram icon"></i></a><!-- Linkedin--><a title="linkedin" href="//www.linkedin.com/in/guidotorresmx"><i class="fa fa-brands fa-linkedin icon"></i></a><!-- Facebook--><a title="facebook" href="//www.facebook.com/guidotorresmx"><i class="fa fa-brands fa-facebook icon"></i></a><!-- Mail--><a title="mail" href="mailto:marco@guidotorres.mx"><i class="fa fa-solid fa-envelope-open icon"></i></a><!-- Whatsapp--><a title="whatsapp" href="//wa.me/16479066194"><i class="fa fa-brands fa-whatsapp icon"></i></a><!-- Telegram--><a title="telegram" href="//t.me/guidotorresmx"><i class="fa fa-brands fa-telegram icon"></i></a><br />2022. guidotorresmx. All rights unreserved. Created by <a href="https://github.com/guidotorresmx">@guidotorresmx</a>. Source code can be found at <a href="https://github.com/guidotorresmx/">@guidotorresmx</a> This website uses Three.JS.</p>

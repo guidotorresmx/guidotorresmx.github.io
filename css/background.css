@@ -14,3 +14,20 @@ section > div > img {
     border: 1px ;
     border-color: red;
 }
+
+#anims
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none;
+
+}
+
+section{
+    height: 100vh;
+}
+
+canvas{
+    overflow : scroll;
+   }

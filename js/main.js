@@ -1,4 +1,4 @@
-import './style.css'
+import '../style.css'
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader"
@@ -6,11 +6,13 @@ import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader"
 import {GUI} from "dat.gui"
 
 const gui = new GUI();
+GUI.toggleHide();
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, .1, 1000);
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#anim'),
-  antialias: true
+  antialias: true,
+  alpha: true,
 })
 
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -20,13 +22,13 @@ renderer.render(scene, camera);
 
 
 const options = {
-  transmission: .7,
-  thickness: .5,
-  roughness: .14,
-  reflectivity: .3,
+  transmission: .72,
+  thickness: 1,
+  roughness: 0,
+  reflectivity: 0,
   color: 0x0000ff,
   flatShading: true,
-  opacity: .7,
+  opacity: 0,
 };
 const material = new THREE.MeshPhysicalMaterial({
   transmission: options.transmission,
@@ -47,38 +49,89 @@ loader.load( 'logo.glb', function ( gltf ) {
 
   logo.traverse( (child) => {
     if ( child instanceof THREE.Mesh ) {
-      child.material = material
+      child.material = material.clone();
+      if ( child.name == "imagetostl_mesh_1"){
+        child.material.color.set( 0xF58A78); 
+      }
+      if ( child.name == "imagetostl_mesh_2"){
+        child.material.color.set( 0x7047F5);
+      }
+      if ( child.name == "imagetostl_mesh_3"){
+        child.material.color.set( 0x825FF5); 
+      }
+      if ( child.name == "imagetostl_mesh_4"){
+        child.material.color.set( 0x9477F5); 
+      }
       console.log(child.material)
       child.castShadow = true;
-      child.receiveShadow = true
-    }}
-  )
+      child.receiveShadow = true;
 
-
-
+    }
+})
   scene.add(logo)
 });
 
-
-
-const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5,5,5)
-scene.add(pointLight);
+for(let i=0; i<10; i++){
+  let pointLight = new THREE.PointLight(0xffffff);
+  let x = Math.random()*(10+10) + -10
+  let y = Math.random()*(10+10) + -10
+  let z = Math.random()*(10+10) + -10
+  const lightHelper = new THREE.PointLightHelper(pointLight);
+  
+  pointLight.position.set(x,y,z)
+  //scene.add(pointLight, lightHelper);
+  scene.add(pointLight);
+}
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 1);
 scene.add(ambientLight);
 
-const lightHelper = new THREE.PointLightHelper(pointLight);
-const gridHelper = new THREE.GridHelper(200, 50);
-scene.add(lightHelper, gridHelper);
+
+//const gridHelper = new THREE.GridHelper(200, 50);
+//scene.add(gridHelper);
 
 
-const controls = new OrbitControls(camera, renderer.domElement);
+var controls = new OrbitControls(camera, renderer.domElement);
+controls.enableZoom = false
 
 gui.add(options, "transmission", 0, 1, 0.01).onChange((val) => {
-  material.transmission = val;
+  logo.traverse( (child) => {
+    if ( child instanceof THREE.Mesh ) {
+      child.material.transmission = val;      
+    }
+  })
 });
+gui.add(options, "thickness", 0, 1, 0.01).onChange((val) => {
+  logo.traverse( (child) => {
+    if ( child instanceof THREE.Mesh ) {
+      child.material.thickness = val;      
+    }
+  })
 
+});
+gui.add(options, "roughness", 0, 1, 0.01).onChange((val) => {
+  logo.traverse( (child) => {
+    if ( child instanceof THREE.Mesh ) {
+      child.material.roughness = val;      
+    }
+  })
+});
+gui.add(options, "reflectivity", 0, 1, 0.01).onChange((val) => {
+  logo.traverse( (child) => {
+    if ( child instanceof THREE.Mesh ) {
+      child.material.reflectivity = val;      
+    }
+  })
+});
+gui.add(options, "opacity", 0, 1, 0.01).onChange((val) => {
+  logo.traverse( (child) => {
+    if ( child instanceof THREE.Mesh ) {
+      child.material.opacity = val;      
+    }
+  })
+});
+gui.close()
+GUI.toggleHide();
 
 
 let mouseX = 0;
@@ -99,6 +152,7 @@ function onDocumentMouseMove(event) {
 
 const clock = new THREE.Clock()
 function animate() {
+  //https://stackoverflow.com/questions/59744058/add-max-movement-to-onmousemove-for-scene-in-three-js
   targetX = mouseX * .001;
   targetY = mouseY * .001;
   
@@ -123,3 +177,4 @@ function animate() {
 }
 
 animate();
+
